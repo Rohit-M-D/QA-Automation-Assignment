@@ -1,6 +1,5 @@
 package Demo;
 import org.testng.annotations.Test;
-import io.github.cdimascio.dotenv.Dotenv;
 
 public class LoginTest extends LoginLogoutApp {
 
