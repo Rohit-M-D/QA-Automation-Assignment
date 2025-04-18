@@ -26,6 +26,7 @@ public class LoginTest extends LoginLogoutApp {
 
         try {
             clickLoginButton();
+            Thread.sleep(7000);
         } catch (Exception e) {
             System.out.println("Login button click failed: " + e.getMessage());
         }

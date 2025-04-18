@@ -11,6 +11,7 @@ public class LoginLogoutApp extends BasePageTest {
     By emailField = By.xpath("//input[@placeholder='Enter email']");
     By passwordField = By.xpath("//input[@placeholder='Enter password']");
     By loginButton = By.xpath("//div[text()='Log in']");
+    By loginBtn= By.xpath("(//div[contains(text(),'Log in')])[3]");
     // By loginButton = By.xpath("//button[@role='button' and .//div[contains(text(), 'Log in')]]");
     // By loginButton = By.xpath("//button[@role='button' and .//div[text()='Log in']]");
 
@@ -33,7 +34,7 @@ public class LoginLogoutApp extends BasePageTest {
     }
 
     public void clickLoginButton() {
-        clickElement(loginButton);
+        clickElement(loginBtn);
     }
 
 }

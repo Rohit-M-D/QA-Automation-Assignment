@@ -20,9 +20,6 @@ public class WebLaunchTest {
         
 
         driver = new ChromeDriver();
-
-        
-
         driver.get(url);
          
     }
