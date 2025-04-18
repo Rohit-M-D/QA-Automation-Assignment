@@ -29,7 +29,7 @@ public class LoginTest extends LoginLogoutApp {
 
         clickSettingsBtn();
 
-        Thread.sleep(7000);
+        Thread.sleep(6000);
 
         clickLogoutBtn();
 
