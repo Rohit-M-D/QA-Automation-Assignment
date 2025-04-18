@@ -1,10 +1,14 @@
 package Demo;
 import org.testng.annotations.Test;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class LoginTest extends LoginLogoutApp {
 
     @Test
     public void test() throws InterruptedException {
+        Dotenv dotenv = Dotenv.load();
+        String email = dotenv.get("EMAIL");
+        String password = dotenv.get("PASSWORD");
 
         driver.navigate().refresh();
 
@@ -18,8 +22,8 @@ public class LoginTest extends LoginLogoutApp {
         clickLoginWithEmailAndPassword();
         Thread.sleep(1000);
 
-        enterEmail("chandan.n+10jul23@datman.je");
-        enterPassword("Datman@123");
+        enterEmail(email);
+        enterPassword(password);
 
         Thread.sleep(500);
 
