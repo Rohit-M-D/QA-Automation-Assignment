@@ -6,9 +6,7 @@ public class LoginTest extends LoginLogoutApp {
 
     @Test
     public void test() throws InterruptedException {
-        Dotenv dotenv = Dotenv.load();
-        String email = dotenv.get("EMAIL");
-        String password = dotenv.get("PASSWORD");
+        
 
         driver.navigate().refresh();
 
