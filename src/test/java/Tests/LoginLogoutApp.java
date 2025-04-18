@@ -1,4 +1,4 @@
- package Demo;
+ package Tests;
 
 import org.openqa.selenium.By;
 
@@ -14,6 +14,11 @@ public class LoginLogoutApp extends BasePageTest {
     By loginBtn= By.xpath("(//div[contains(text(),'Log in')])[3]");
     // By loginButton = By.xpath("//button[@role='button' and .//div[contains(text(), 'Log in')]]");
     // By loginButton = By.xpath("//button[@role='button' and .//div[text()='Log in']]");
+
+
+    By settingsBtn = By.xpath("//span[text()='Settings']");
+    By logoutBtn = By.xpath("//div[text()='Logout']");
+
 
 
 
@@ -35,6 +40,14 @@ public class LoginLogoutApp extends BasePageTest {
 
     public void clickLoginButton() {
         clickElement(loginBtn);
+    }
+
+    public void clickSettingsBtn(){
+        clickElement(settingsBtn);
+    }
+
+    public void clickLogoutBtn(){
+        clickElement(logoutBtn);
     }
 
 }
