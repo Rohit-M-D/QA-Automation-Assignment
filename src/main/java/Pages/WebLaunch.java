@@ -1,18 +1,26 @@
-package Tests;
+package Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
 import io.github.cdimascio.dotenv.Dotenv;
+import utils.ExtentReportManager;
 
 
-public class WebLaunchTest {
-    WebDriver driver;
+public class WebLaunch extends ExtentReportManager {
+    public WebDriver driver;
+    protected static ExtentReports extent;
+    protected static ExtentTest test;
     Dotenv dotenv = Dotenv.load();
-    String email = dotenv.get("EMAIL");
-    String password = dotenv.get("PASSWORD");
-    String url = dotenv.get("URL");
+    public String email = dotenv.get("EMAIL");
+    public String password = dotenv.get("PASSWORD");
+    public String url = dotenv.get("URL");
 
     @BeforeClass(alwaysRun = true)
     public void start() throws InterruptedException {
@@ -30,4 +38,6 @@ public class WebLaunchTest {
         Thread.sleep(4000);
         driver.quit();
     }
+
+    
 }

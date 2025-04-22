@@ -1,11 +1,10 @@
 package Tests;
 import org.testng.annotations.Test;
+import Pages.LoginFlow;
 
-public class LoginTest extends LoginLogoutApp {
-
-    @Test
-    public void test() {
-        driver.navigate().refresh();
+public class LoginTest extends LoginFlow {
+    @Test(priority = 1)
+    public void validLoginTest() {
         clickFirstLoginButton();
         clickLoginWithEmailAndPassword();
         enterEmail(email);
@@ -13,6 +12,5 @@ public class LoginTest extends LoginLogoutApp {
         clickLoginButton();
         clickSettingsBtn();
         clickLogoutBtn();
-
-    }  
+    } 
 }
