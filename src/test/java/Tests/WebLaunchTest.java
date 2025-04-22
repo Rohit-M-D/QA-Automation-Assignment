@@ -20,9 +20,14 @@ public class WebLaunchTest {
         driver.get(url);
          
     }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
     
     @AfterClass(alwaysRun = true)
-    public void tearDown() {
+    public void tearDown() throws InterruptedException {
+        Thread.sleep(4000);
         driver.quit();
     }
 }

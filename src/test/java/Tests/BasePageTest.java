@@ -10,14 +10,14 @@ import java.time.Duration;
 public class BasePageTest extends WebLaunchTest {
 
     public void sendKeys(By locator, String value) {
-        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(45))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
         element.clear();
         element.sendKeys(value);
     }
 
     public void clickElement(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(45));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
         System.out.println("Clicked: " + locator);
         

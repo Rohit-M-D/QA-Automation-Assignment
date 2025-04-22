@@ -15,3 +15,5 @@ Assignment -> src -> test -> java -> Demo
 3. LoginLogoutApp.java - To perform test operations
 4. LoginTest.java - To run test cases
 
+To run the code use below command
+mvn clean test
