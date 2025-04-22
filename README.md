@@ -10,9 +10,9 @@ This is an automated test framework built using **Java**, **Selenium WebDriver**
 Assignment -> src -> test -> java -> Demo 
 
 ## Explaination
-1. WebLaunchTest.java - To launch chrome webdriver
-2. BasePageTest.java - have basic methods to use overall
-3. LoginLogoutApp.java - To perform test operations
+1. WebLaunch.java - To launch chrome webdriver
+2. BaseMethods.java - have basic methods to use overall
+3. LoginFlow.java - To perform test operations
 4. LoginTest.java - To run test cases
 
 To run the code use below command
