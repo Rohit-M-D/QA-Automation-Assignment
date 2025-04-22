@@ -8,7 +8,7 @@ public class ExtentReportManager {
 
     public static ExtentReports getInstance() {
         if (extent == null) {
-            String reportPath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + "ExtentReport.html";
+            String reportPath = System.getProperty("user.dir") + File.separator + "Reports" + File.separator + "ExtentReport.html";
 
             ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 

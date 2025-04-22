@@ -17,6 +17,7 @@ import java.util.Properties;
 
 public class BaseMethods extends WebLaunch {
     Properties properties = new Properties();
+
     public void sendKeys(String locator, String value) {
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(45))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
@@ -34,9 +35,7 @@ public class BaseMethods extends WebLaunch {
         } catch (Exception e) {
             System.out.println("Exception in method: " + methodName);
             System.out.println("Reason: " + e.getMessage());
-            takeScreenshot(methodName);
-
-            
+            takeScreenshot(methodName); 
         }
     }
 
