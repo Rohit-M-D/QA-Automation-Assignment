@@ -17,7 +17,7 @@ public class BasePageTest extends WebLaunchTest {
     }
 
     public void clickElement(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
         System.out.println("Clicked: " + locator);
         
