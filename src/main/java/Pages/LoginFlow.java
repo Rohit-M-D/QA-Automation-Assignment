@@ -1,6 +1,11 @@
 package Pages;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class LoginFlow extends BaseMethods{
+
+    Dotenv dotenv = Dotenv.load();
+    public String email = dotenv.get("EMAIL");
+    public String password = dotenv.get("PASSWORD");
 
     public void clickFirstLoginButton() {
         driver.navigate().refresh();

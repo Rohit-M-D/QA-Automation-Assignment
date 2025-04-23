@@ -56,7 +56,7 @@
         <version>3.5.3</version>
         <configuration>
           <includes>
-              <include>**/LoginTest.java</include>
+              <include>**/*LoginTest.java</include>
           </includes>
           <properties>
             <property>

@@ -1,15 +1,18 @@
 package Tests;
+
 import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.Status;
 
 import Pages.LoginFlow;
 import utils.TakeScreenshot;
 
-public class LoginTest extends LoginFlow {
+public class TC02_InvalidLoginTest extends LoginFlow {
+    String pswd = "Datman@122";
 
-    @Test(priority = 1)
-    public void validLoginTest() {
-        test = extent.createTest("validLoginTest"); 
+    @Test(priority = 2)
+    public void invalidLoginTest() {
+        test = extent.createTest("invalidLoginTest"); 
         try {
             test.log(Status.INFO, "Clicking first login button");
             clickFirstLoginButton();
@@ -21,7 +24,7 @@ public class LoginTest extends LoginFlow {
             enterEmail(email);
 
             test.log(Status.INFO, "Entering password");
-            enterPassword(password);
+            enterPassword(pswd);
 
             test.log(Status.INFO, "Clicking login button");
             clickLoginButton();
@@ -36,12 +39,8 @@ public class LoginTest extends LoginFlow {
 
         } catch (Exception e) {
             test.log(Status.FAIL, "Test failed with exception: " + e.getMessage());
-            TakeScreenshot.takeScreenshot("validLoginTest");  
+            TakeScreenshot.takeScreenshot("invalidLoginTest");  
         }
     }
 
-
-
-
-    
 }
