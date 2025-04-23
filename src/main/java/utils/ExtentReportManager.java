@@ -1,10 +1,12 @@
 package utils;
 
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import java.io.File;
-public class ExtentReportManager {
-    private static ExtentReports extent;
+public class ExtentReportManager  {
+    public static ExtentReports extent;
+    public static ExtentTest test;
 
     public static ExtentReports getInstance() {
         if (extent == null) {

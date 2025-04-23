@@ -6,18 +6,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import utils.ExtentReportManager;
-
-
-
-
 public class WebLaunch extends ExtentReportManager {
-    public String url = BaseMethods.getLocators("URL");
+    public String portalUrl = BaseMethods.getLocators("PortalURL");
     public static WebDriver driver;
-    protected static ExtentReports extent;
-    protected static ExtentTest test;
 
     @BeforeSuite
     public void setUpReport() {
@@ -27,7 +19,7 @@ public class WebLaunch extends ExtentReportManager {
     @BeforeClass(alwaysRun = true)
     public void start() throws InterruptedException {
         driver = new ChromeDriver();
-        driver.get(url);
+        driver.get(portalUrl);
          
     }
 
@@ -41,6 +33,4 @@ public class WebLaunch extends ExtentReportManager {
     public void flushReport() {
         extent.flush(); 
     }
-
-    
 }

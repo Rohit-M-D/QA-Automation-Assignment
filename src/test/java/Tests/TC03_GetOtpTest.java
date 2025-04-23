@@ -1,0 +1,22 @@
+package Tests;
+
+import org.testng.annotations.Test;
+import com.aventstack.extentreports.Status;
+import Pages.LoginFlow;
+
+
+//This test case is for verifying OTP button
+
+public class TC03_GetOtpTest extends LoginFlow {
+
+    @Test
+    public void otpPageTest() {
+        test = extent.createTest("GetOtpTest"); 
+       
+            clickFirstLoginButton();
+            enterMobileNumber();
+            clickGetOtpBtn();
+            test.log(Status.PASS, "OTP flow passed successfully");
+    }
+    
+}

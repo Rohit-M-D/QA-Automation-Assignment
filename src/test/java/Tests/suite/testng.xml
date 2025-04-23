@@ -4,6 +4,7 @@
         <classes>
             <class name="Tests.TC01_LoginTest"/>
             <class name="Tests.TC02_InvalidLoginTest"/>
+            <class name="Tests.TC03_GetOtpTest"/>
         </classes>
     </test>
 </suite>
