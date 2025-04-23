@@ -3,6 +3,7 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
 
 import Pages.LoginFlow;
+import utils.TakeScreenshot;
 
 public class LoginTest extends LoginFlow {
 
@@ -35,7 +36,7 @@ public class LoginTest extends LoginFlow {
 
         } catch (Exception e) {
             test.log(Status.FAIL, "Test failed with exception: " + e.getMessage());
-            takeScreenshot("validLoginTest");  
+            TakeScreenshot.takeScreenshot("validLoginTest");  
         }
     }
 

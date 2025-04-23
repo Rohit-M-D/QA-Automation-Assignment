@@ -12,7 +12,7 @@ import io.github.cdimascio.dotenv.Dotenv;
 import utils.ExtentReportManager;
 
 public class WebLaunch extends ExtentReportManager {
-    public WebDriver driver;
+    public static WebDriver driver;
     protected static ExtentReports extent;
     protected static ExtentTest test;
     Dotenv dotenv = Dotenv.load();
