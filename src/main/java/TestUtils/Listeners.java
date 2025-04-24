@@ -6,6 +6,7 @@ import com.aventstack.extentreports.Status;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 import Pages.WebLaunch;
 
 
@@ -51,7 +52,7 @@ public class Listeners implements ITestListener {
     private void captureScreenshot(ITestResult result, String status) {
         try {
             if (WebLaunch.driver != null) {
-                String screenshotPath = WebLaunch.getScreenshotPath(result.getMethod().getMethodName() + "_" + status, WebLaunch.driver);
+                String screenshotPath = WebLaunch.getScreenshotPath(result.getMethod().getMethodName() , WebLaunch.driver);
                 test.addScreenCaptureFromPath(screenshotPath, result.getMethod().getMethodName());
                 System.out.println("Screenshot captured: " + screenshotPath);
             } else {

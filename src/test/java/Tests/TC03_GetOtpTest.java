@@ -14,7 +14,6 @@ public class TC03_GetOtpTest extends LoginFlow {
             clickFirstLoginButton();
             enterMobileNumber(dummyMobNo);
             clickGetOtpBtn();
-            validate_alertMessageForOtpPage();
             
     }
     

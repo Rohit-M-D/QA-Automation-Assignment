@@ -13,8 +13,7 @@ public class TC04_WrongMobileNumberTest extends LoginFlow {
         
             clickFirstLoginButton();
             enteredWrongMobileNumber();
-            clickGetOtpBtn();
-            
+            clickGetOtpBtn();   
     }
     
 }

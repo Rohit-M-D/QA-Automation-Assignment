@@ -30,16 +30,20 @@ public class BaseMethods extends WebLaunch {
             System.out.println("Clicked: " + locator);
     }
 
-    public void validatingTextMessage(String locator, String methodName, String expectedMessage) {
+    public static void validatingTextMessage(String locator, String methodName, String expectedMessage) {
+        
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(45));
-            WebElement actualMessage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
-            System.out.println("Verifying the page label: "+actualMessage.getText());
-            Assert.assertEquals(actualMessage.getText(), expectedMessage, "The messages do not match!");
+            WebElement Message = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+            String actualMessage=Message.getText();
+            Assert.assertEquals(actualMessage, expectedMessage, "The messages do not match!");
+           
         } catch (Exception e) {
             System.out.println("Exception in method: " + methodName);
             System.out.println("Reason: " + e.getMessage());
         }
+        
+        
     }
 
     public static String getLocators(String value) {
