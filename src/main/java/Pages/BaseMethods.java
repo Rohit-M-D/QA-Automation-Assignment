@@ -5,8 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.TakeScreenshot;
 import org.testng.Assert;
+
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -34,19 +35,23 @@ public class BaseMethods extends WebLaunch {
             WebElement actualMessage = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
             System.out.println("Verifying the page label: "+actualMessage.getText());
             Assert.assertEquals(actualMessage.getText(), expectedMessage, "The messages do not match!");
-            TakeScreenshot.takeScreenshot(methodName);
         } catch (Exception e) {
             System.out.println("Exception in method: " + methodName);
             System.out.println("Reason: " + e.getMessage());
         }
     }
-    
 
     public static String getLocators(String value) {
         try {
-            FileInputStream input = new FileInputStream("src/resources/locator.properties");
-            properties.load(input);
-
+            File folder = new File("src/resources");
+            File[] files = folder.listFiles((dir, name) -> name.endsWith(".properties"));
+            if (files != null) {
+                for (File file : files) {
+                    FileInputStream input = new FileInputStream(file);
+                    properties.load(input);
+                    input.close();
+            }
+        }
         } catch (IOException e) {
             e.printStackTrace();
         }

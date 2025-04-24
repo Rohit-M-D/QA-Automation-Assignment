@@ -1,6 +1,5 @@
 package Tests;
 import org.testng.annotations.Test;
-import com.aventstack.extentreports.Status;
 import Pages.LoginFlow;
 
 
@@ -11,7 +10,7 @@ public class TC02_InvalidLoginTest extends LoginFlow {
 
     @Test
     public void invalidLoginTest() {
-        test = extent.createTest("invalidLoginTest"); 
+        
     
             clickFirstLoginButton();
             clickLoginWithEmailAndPassword();           
@@ -19,7 +18,7 @@ public class TC02_InvalidLoginTest extends LoginFlow {
             enterPassword(pswd);           
             clickLoginButton();
             validate_alertMessageForLoginPage();
-            test.log(Status.PASS, "Login and Logout flow passed successfully");   
+              
     }
 
 }

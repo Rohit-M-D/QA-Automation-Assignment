@@ -10,7 +10,7 @@ public class TC01_LoginTest extends LoginFlow {
 
     @Test
     public void validLoginTest() {
-        test = extent.createTest("validLoginTest"); 
+        // test = extent.createTest("validLoginTest"); 
             
             clickFirstLoginButton();
             clickLoginWithEmailAndPassword();
@@ -19,7 +19,7 @@ public class TC01_LoginTest extends LoginFlow {
             clickLoginButton();
             clickSettingsBtn();
             clickLogoutBtn();
-            test.log(Status.PASS, "Login and Logout flow passed successfully");
+            
     }
 
 

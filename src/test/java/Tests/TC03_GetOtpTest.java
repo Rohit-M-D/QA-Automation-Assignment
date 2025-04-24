@@ -11,12 +11,12 @@ public class TC03_GetOtpTest extends LoginFlow {
 
     @Test
     public void otpPageTest() {
-        test = extent.createTest("GetOtpTest"); 
+        
        
             clickFirstLoginButton();
             enterMobileNumber();
             clickGetOtpBtn();
-            test.log(Status.PASS, "OTP flow passed successfully");
+            
     }
     
 }
