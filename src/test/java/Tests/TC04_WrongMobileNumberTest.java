@@ -1,20 +1,19 @@
 package Tests;
 
 import org.testng.annotations.Test;
+
 import Pages.LoginFlow;
 
-//This test case is for verifying OTP button
 
-public class TC03_GetOtpTest extends LoginFlow {
-    String dummyMobNo = "0000000000";
+//This test is for wrong mibile number
 
+public class TC04_WrongMobileNumberTest extends LoginFlow {
     @Test
     public void otpPageTest() {
         
             clickFirstLoginButton();
-            enterMobileNumber(dummyMobNo);
+            enteredWrongMobileNumber();
             clickGetOtpBtn();
-            validate_alertMessageForOtpPage();
             
     }
     

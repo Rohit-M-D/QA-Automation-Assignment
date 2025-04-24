@@ -11,6 +11,8 @@ public class LoginFlow extends BaseMethods {
     public String email = dotenv.get("EMAIL");
     public String password = dotenv.get("PASSWORD");
     public String mobNo = getLocators("mobileNumber");
+    public String wrongMobNo = "0000000000";
+
 
     public void clickFirstLoginButton() {
         driver.navigate().refresh();
@@ -29,8 +31,11 @@ public class LoginFlow extends BaseMethods {
         sendKeys(getLocators("passwordField"), password);
     }
 
-    public void enterMobileNumber(){
+    public void enterMobileNumber(String mobNo){
         sendKeys(getLocators("otpInput"), mobNo);
+    }
+    public void enteredWrongMobileNumber(){
+        sendKeys(getLocators("otpInput"), wrongMobNo);
     }
 
     public void clickGetOtpBtn(){
@@ -57,4 +62,10 @@ public class LoginFlow extends BaseMethods {
     public void validate_alertMessageForLoginPage(){
         validatingTextMessage(getLocators("invalidAlertMessage"),"validate_alertMessageForLoginPage","Your authentication information is incorrect. Please try again.");
     }
+
+    public void validate_alertMessageForOtpPage(){
+        validatingTextMessage(getLocators("wrongOtp"),"validate_alertMessageForOtpPage",getLocators("wrongOtpMessage"));
+    }
+
+
 }

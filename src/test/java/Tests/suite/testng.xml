@@ -8,6 +8,7 @@
             <class name="Tests.TC01_LoginTest"/>
             <class name="Tests.TC02_InvalidLoginTest"/>
             <class name="Tests.TC03_GetOtpTest"/>
+            <class name="Tests.TC04_WrongMobileNumberTest" />
         </classes>
     </test>
 </suite>
