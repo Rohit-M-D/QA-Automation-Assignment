@@ -1,6 +1,10 @@
 package Pages;
 import io.github.cdimascio.dotenv.Dotenv;
 
+
+
+// This class is having methods of web testing flow for any test case senario.
+
 public class LoginFlow extends BaseMethods { 
 
     Dotenv dotenv = Dotenv.load();
@@ -51,6 +55,6 @@ public class LoginFlow extends BaseMethods {
     }
 
     public void validate_alertMessageForLoginPage(){
-        validatingTextMessage(getLocators("invalidAlertMessage"),"verifying_loginpage","Your authentication information is incorrect. Please try again.");
+        validatingTextMessage(getLocators("invalidAlertMessage"),"validate_alertMessageForLoginPage","Your authentication information is incorrect. Please try again.");
     }
 }

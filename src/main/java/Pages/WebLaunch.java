@@ -10,13 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
-import com.aventstack.extentreports.ExtentReports;
 import TestUtils.ExtentReportNG;
 
-public class WebLaunch {
+// This class is a crome driver launcher. (Driver Factory).
+
+public class WebLaunch extends ExtentReportNG {
     public String portalUrl = BaseMethods.getLocators("PortalURL");
     public static WebDriver driver;
-    public static ExtentReports extent; // Shared instance
 
     @BeforeSuite
     public void setUpReport() {

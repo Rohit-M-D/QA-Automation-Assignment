@@ -4,8 +4,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import java.io.File;
 
+// Method to generate extent report after the test case execution.
+
 public class ExtentReportNG {
-    static ExtentReports extent;
+    public static ExtentReports extent;
 
     public static ExtentReports generateReport() {
         String reportDir = System.getProperty("user.dir") + "/reports";

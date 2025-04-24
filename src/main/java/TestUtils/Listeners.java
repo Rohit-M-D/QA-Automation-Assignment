@@ -8,6 +8,10 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import Pages.WebLaunch;
 
+
+// This Listners class is for automated screenshot capture for test results.
+// ITestListener interface allows to verify various test lifecycle events
+
 public class Listeners implements ITestListener {
     ExtentReports extent = ExtentReportNG.generateReport(); 
     ExtentTest test;
