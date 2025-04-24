@@ -11,7 +11,6 @@ public class LoginFlow extends BaseMethods {
     public String email = dotenv.get("EMAIL");
     public String password = dotenv.get("PASSWORD");
     public String mobNo = getLocators("mobileNumber");
-    public String wrongMobNo = "0000000000";
 
 
     public void clickFirstLoginButton() {
@@ -33,9 +32,6 @@ public class LoginFlow extends BaseMethods {
 
     public void enterMobileNumber(String mobNo){
         sendKeys(getLocators("otpInput"), mobNo);
-    }
-    public void enteredWrongMobileNumber(){
-        sendKeys(getLocators("otpInput"), wrongMobNo);
     }
 
     public void clickGetOtpBtn(){
