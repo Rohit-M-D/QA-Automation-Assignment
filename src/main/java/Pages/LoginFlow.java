@@ -59,5 +59,9 @@ public class LoginFlow extends BaseMethods {
         validatingTextMessage(getLocators("invalidAlertMessage"),"validate_alertMessageForLoginPage","Your authentication information is incorrect. Please try again.");
     }
 
+    public void validate_alertMessageforLogout(){
+        validatingTextMessage(getLocators("loggedOutMessageAlert"),"validate_alertMessageforLogout","Logged out successfully");
+    }
+
 
 }

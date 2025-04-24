@@ -16,6 +16,7 @@ public class TC01_LoginTest extends LoginFlow {
             clickLoginButton();
             clickSettingsBtn();
             clickLogoutBtn();
+            validate_alertMessageforLogout();
             
     }
 

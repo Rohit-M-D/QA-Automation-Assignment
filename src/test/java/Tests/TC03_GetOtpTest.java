@@ -9,7 +9,7 @@ public class TC03_GetOtpTest extends LoginFlow {
     
 
     @Test
-    public void otpPageTest() {
+    public void otpPageTest() throws InterruptedException {
         
             clickFirstLoginButton();
             enterMobileNumber(mobNo);

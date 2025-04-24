@@ -6,7 +6,7 @@ import Pages.LoginFlow;
 // This test is for verifying invalid login credentials 
 
 public class TC02_InvalidLoginTest extends LoginFlow {
-    String pswd = "Datman@122";
+    String pswd = "Datman";
 
     @Test
     public void invalidLoginTest() {

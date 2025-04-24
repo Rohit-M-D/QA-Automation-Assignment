@@ -16,7 +16,7 @@ import java.util.Properties;
 
 public class BaseMethods extends WebLaunch {
     static Properties properties = new Properties();
-
+    
     public void sendKeys(String locator, String value) {
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(45))
                 .until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
