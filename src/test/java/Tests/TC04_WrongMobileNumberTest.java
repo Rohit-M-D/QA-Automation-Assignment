@@ -10,9 +10,7 @@ import Pages.LoginFlow;
 public class TC04_WrongMobileNumberTest extends LoginFlow {
     String dummyMobNo = "0000000000";
     @Test
-    public void otpPageTest() {
-        
-        
+    public void wrongMobNoTest() {
             clickFirstLoginButton();
             enterMobileNumber(dummyMobNo);
             clickGetOtpBtn();   
