@@ -7,7 +7,7 @@ This is an automated test framework built using **Java**, **Selenium WebDriver**
 ---
 
 ## 📂 Project Structure
-
+![My Image](Assignment/Project_Strcture.png)
 
 
 ## Explaination
